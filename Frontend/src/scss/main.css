@@ -1,0 +1,71 @@
+body #app #main .home .lookbooks, body #app #main .home .lookbooks div, body #app #main .home .categories, body #app #main .home .categories div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  margin: 0;
+}
+
+body h1 {
+  margin: 0;
+}
+
+body #app {
+  margin: 0;
+  background: grey;
+}
+
+body #app #nav {
+  background: #5555d1;
+}
+
+body #app #main {
+  background: #5b5bb4;
+}
+
+body #app #main .home .new_arrivals {
+  height: 30vh;
+  background: #9d4eb4;
+  padding: 10px;
+}
+
+body #app #main .home .lookbooks {
+  height: 50vh;
+  background: #86439b;
+  padding: 0 5px 0 5px;
+}
+
+body #app #main .home .lookbooks div {
+  background: pink;
+  margin: 5px;
+  width: 50%;
+  height: 90%;
+}
+
+body #app #main .home .categories {
+  height: 90vh;
+  background: #703781;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #app #main .home .categories div {
+  background: pink;
+  margin: 5px;
+  width: 45%;
+  height: 30%;
+}
+
+body #app footer {
+  background: #4343a5;
+  height: 100px;
+}
+/*# sourceMappingURL=main.css.map */
