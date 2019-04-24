@@ -27,6 +27,10 @@ body #app #nav {
   background: #5555d1;
 }
 
+body #app #nav .cart img {
+  height: 20px;
+}
+
 body #app #main {
   background: #5b5bb4;
 }

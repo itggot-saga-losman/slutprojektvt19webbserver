@@ -1,5 +1,5 @@
 <template>
   <div id="cart">
-    <p>Hej</p>
+    <p>cart</p>
   </div>
 </template>
