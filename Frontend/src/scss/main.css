@@ -68,6 +68,43 @@ body #app #main .home .categories div {
   height: 30%;
 }
 
+body #app #main .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #app #main .products img {
+  height: 200px;
+  width: 100%;
+}
+
+body #app #main .products .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100px;
+  width: calc(100% / 3);
+  background: red;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body #app #main .products .product div {
+  background: blue;
+}
+
 body #app footer {
   background: #4343a5;
   height: 100px;

@@ -1,9 +1,16 @@
 <template>
-  <main>
     <section class="products">
-        <div v-for="item in products" v-bind:key="item.ItemID" ><h1>{{item.ItemName}}</h1></div>
-    </section>
-  </main>
+    <img src="../assets/toa-heftiba-1527727-unsplash.jpg" alt="">
+    <div class="product" v-for="item in products" v-bind:key="item.ItemID">
+      <div>
+        <h1>{{item.ItemName}}</h1>
+        <h1>{{item.ItemID}}</h1>
+        <h1>{{item.Category}}</h1>
+        <h1>{{item.Price}} kr</h1>
+      </div>
+      
+    </div>
+  </section>
 </template>
 
 <script>
@@ -18,11 +25,10 @@ export default {
     async getClothing() {
       let res = await this.$http.get("http://localhost:4567");
       this.products = res.data;
-      console.log("hej")
     }
   },
   mounted: function() {
-    this.getClothing()
+    this.getClothing();
   }
 };
 </script>

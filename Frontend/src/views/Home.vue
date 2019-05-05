@@ -1,14 +1,14 @@
 <template>
   <div class="home">
     <div class="new_arrivals">
-        New arrivals
+        <img src="../assets/toa-heftiba-1527727-unsplash.jpg" alt="">
     </div>
     <div class="lookbooks">
         <div class="lookbook_1">
-            Lookbook 1
+            <img src="../assets/austin-wade-1520502-unsplash.jpg" alt="">
         </div>
         <div class="lookbook_2">
-            Lookbook 2
+            <img src="../assets/marek-mucha-1517263-unsplash.jpg" alt="">
         </div>
     </div>
     <div class="categories">
