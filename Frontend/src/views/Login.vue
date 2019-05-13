@@ -24,20 +24,27 @@ export default {
   name: 'login',
   data(){
     return {
-      username: null,
-      password: null
+      username: "Sagoos",
+      password: "ery"
     }
   },
   methods: {
     async login(){
-
-      let result = await axios.post('/api/login', {username: this.username, password: this.password})
-      if(result.data.success){
-        console.log("YOU ARE LOGGED IN")
-      }else{
-        console.log("NOOB")
-      }
-      this.$router.push('/');
+    //   try {
+    //   let result = await axios.post('http://localhost:4567/api/login', {username: this.username, password: this.password})
+    //   console.log(result)
+    //   if(result.data.success){
+    //     console.log("YOU ARE LOGGED IN")
+    //   }else{
+    //     console.log("NOOB")
+    //   }
+      
+    //   this.$router.push('/');
+    
+    // } catch(err) {
+    //   console.error(err);
+    // }
+    
     }
   },
   // name: "user",

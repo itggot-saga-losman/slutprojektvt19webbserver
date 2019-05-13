@@ -18,8 +18,16 @@ export default {
   name: "all",
   data() {
     return {
-      products: null
+      
     };
+  },
+  computed: {
+    products(){
+      return this.$parent.products;
+    },
+    users(){
+      return this.$parent.users;
+    }
   },
   methods: {
     async getClothing() {
@@ -28,7 +36,7 @@ export default {
     }
   },
   mounted: function() {
-    this.getClothing();
+   // this.getClothing();
   }
 };
 </script>
