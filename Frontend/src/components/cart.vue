@@ -1,7 +1,8 @@
 <template>
     <section id="cart">
       <main class="items">
-        <h2 @click="close">Din kundvagn</h2>
+        <h2>Din kundvagn</h2>
+        <h3 @click="close">Tillbaka</h3>
         <article class="cart-item" v-for="item in cart" :key="item.ItemID">
             <section class="image">
                 <img src="../assets/austin-wade-1520502-unsplash.jpg" alt="">
@@ -14,12 +15,8 @@
             {{ item.price }}
             </section>
         </article>
-        <a href="#" class="button">Köp!</a> -->
+        <a href="#" v-on:click="buy()">Till kassan</a>
       </main>
-
-
-
-        
     </section>
 </template>
 
@@ -33,6 +30,7 @@ export default {
         this.$parent.views.cart = false;
 
       }
+      
     },
     computed: {
     products(){

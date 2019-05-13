@@ -10,7 +10,7 @@ body{
     h1{
         margin: 0;
     }
-   #app{
+    #app{
         margin:0;
         background: grey;
         #cart {
@@ -27,12 +27,11 @@ body{
                 padding: 1rem;
                 box-sizing: border-box;
                 margin: auto;
+                overflow: scroll;
 
                 article{
                     background: grey;
-                    width: 50vw;
-                    height: 10vh;
-                
+                    width: 70vw;
                     box-sizing: border-box;
                     margin: auto;
                     
@@ -46,6 +45,7 @@ body{
             background: rgb(85, 85, 209);
             
             .cart{
+                z-index: 3000;
                 img{
                     height: 20px; 
                 }
@@ -98,7 +98,27 @@ body{
                     }
                 }
             }
-            .products{
+
+            #product-view{
+                .overlay{
+                    position: fixed;
+                    background: rgba(0, 0, 0, 0.425);
+                    height: 100vh;
+                    width: 100vw;
+                    z-index: 1;
+                }
+
+                .view{
+                    position: fixed;
+                    background: rgb(255, 255, 255);
+                    z-index: 2;
+                    height: 70vh;
+                    width: 80vw;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+                .products{
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
@@ -110,24 +130,26 @@ body{
                 .product{
                     display: flex;
                     flex-direction: column;
-                    height: 100px;
+                    height: 150px;
                     width: calc(100% / 3);
-                    background: red;
+                    background: rgb(212, 117, 117);
                     padding: 5px;
                     box-sizing: border-box;
 
                     div{
-                        background: blue;
+                        height: auto;
+                        img{
+                            height: 50px;
+                            width: 50px;
+                        }
                     }
-
-                }
-
-            }
+                } 
+            }   
+        }
             .about{
                 .about_text{
                     padding: 10px;
                     
-
                     img{
                         height: 20vh;
                         @extend%center;
