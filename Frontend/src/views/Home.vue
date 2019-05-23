@@ -1,22 +1,39 @@
 <template>
   <div class="home">
     <div class="new_arrivals">
-        <img src="../assets/toa-heftiba-1527727-unsplash.jpg" alt="">
+        New arrivals
     </div>
     <div class="lookbooks">
-        <div class="lookbook_1">
-            <img src="../assets/austin-wade-1520502-unsplash.jpg" alt="">
+        <h1>Lookbooks!</h1>
+        <div class="container">
+            <router-link to="/clothes" class="lookbook_1">
+             <p>Cozy winter</p>
+            </router-link> 
+            <router-link to="/clothes" class="lookbook_2">
+             <p>Crazy travels</p>
+            </router-link> 
+            
         </div>
-        <div class="lookbook_2">
-            <img src="../assets/marek-mucha-1517263-unsplash.jpg" alt="">
-        </div>
+        
     </div>
+    <h1>Categories!</h1>
     <div class="categories">
-        <div class="category_1">category 1</div>
-        <div class="category_2">category 2</div>
-        <div class="category_3">category 3</div>
-        <div class="category_4">category 4</div>
-        <div class="category_5">category 5</div>
+        <router-link to="/clothes" class="category_1">
+             <p>Shirts</p>
+        </router-link> 
+        <router-link to="/clothes" class="category_2">
+             <p>Pants</p>
+        </router-link> 
+        <router-link to="/clothes" class="category_3">
+             <p>Dresses</p>
+        </router-link> 
+        <router-link to="/clothes" class="category_4">
+             <p>Shoes</p>
+        </router-link> 
+        <router-link to="/clothes" class="category_5">
+             <p>Jackets</p>
+        </router-link> 
+        
     </div>
   </div>
 </template>

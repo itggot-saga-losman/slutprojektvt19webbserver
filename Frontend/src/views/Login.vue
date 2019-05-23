@@ -30,39 +30,9 @@ export default {
   },
   methods: {
     async login(){
-    //   try {
-    //   let result = await axios.post('http://localhost:4567/api/login', {username: this.username, password: this.password})
-    //   console.log(result)
-    //   if(result.data.success){
-    //     console.log("YOU ARE LOGGED IN")
-    //   }else{
-    //     console.log("NOOB")
-    //   }
-      
-    //   this.$router.push('/');
-    
-    // } catch(err) {
-    //   console.error(err);
-    // }
-    
     }
-  },
-  // name: "user",
-  // data() {
-  //   return {
-  //     users: null
-  //   };
-  // },
-  // methods: {
-  //   async getUser() {
-  //     let res = await this.$http.get("http://localhost:4567");
-  //     this.users = res.data;
-  //   }
-  // },
-  // mounted: function() {
-  //   this.getUser();
-  // }
-};
+}}
+
 </script>
 
 <style>

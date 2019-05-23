@@ -5,10 +5,15 @@
 }
 
 body{
+    font-family: 'Roboto', sans-serif;
     margin:0;
-
+    
+    background: rgb(44, 44, 44);
+    text-decoration: none;
+    
     h1{
-        margin: 0;
+        
+        color: white;
     }
     #app{
         margin:0;
@@ -16,18 +21,34 @@ body{
         #cart {
             background: rgba($color: #0000, $alpha: 0.8);
             position: fixed;
+            z-index: 3;
             height: 100vh;
             width: 100vw;
             display: flex;
             
             .items {
                 width: 90vw;
-                height: 90vh;
+                height: 95vh;
                 background: white;
                 padding: 1rem;
                 box-sizing: border-box;
                 margin: auto;
                 overflow: scroll;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    padding: 5px;
+                    background: grey;
+                }
+
+                .close{
+                    position: fixed;
+                    top: 2rem;
+                    right: 2rem;
+                    height: 20px;
+                    width: 20px ;
+                    color: white;
+                }    
 
                 article{
                     background: grey;
@@ -42,70 +63,131 @@ body{
             }
         }
         #nav{
-            background: rgb(85, 85, 209);
             
+            background: rgb(31, 31, 31);
+            height: 8vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+             
+            a{
+                
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+            }
+
             .cart{
-                z-index: 3000;
+                top: 1rem;
+                height: 2rem;
+                width: 2rem;
+                position: relative;
+                z-index: 0;
+                text-decoration: none;
+
+
+                .badge {
+                    position: absolute;
+                    background: #eee;
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: .8rem;
+                    top: -.4rem;
+                    right: -.3rem;
+                    padding: .125rem;
+                    border-radius: 99rem;
+
+                }
                 img{
                     height: 20px; 
+                    color: white;
                 }
             }
          
         }
         #main{
-            background: rgb(91, 91, 180);
+            background: rgb(44, 44, 44);
             
             .home{
                 .new_arrivals{
                     height: 30vh;
-                    background: rgb(157, 78, 180);
-                    padding: 10px;
-                    overflow: hidden;
-                    img{
-                        width: 95vw;
-                        
-                    }
+                    background: rgb(44, 44, 44);
+                    padding: 1rem;
+                    
+                    background-image: url("../assets/toa-heftiba-1527727-unsplash.jpg");
+                    background-size: cover;
                 }
                 .lookbooks{
                     height: 50vh;
-                    background: rgb(134, 67, 155);
+                    background: rgb(44, 44, 44);
                     @extend%center;
                     padding: 0 5px 0 5px;
+                    display: flex;
+                    flex-direction: column;
 
-                    div{
-                        @extend%center;
-                        background: pink;
-                        margin: 5px;
-                        width: 50%;
-                        height: 90%;
-                        img{
-                            height: inherit;
+                    .container{
+                        width: 100%;
+                        background: rgb(44, 44, 44);
+                        
+                        .lookbook_1{
+                            margin: 0 5px 0 0;
+                            height: 100%;
+                            width: 50%;
+                            background-image: url("../assets/marek-mucha-1517263-unsplash.jpg");
+                            background-size: cover;
+                            color: white;
+                            text-decoration: none;
+                            @extend%center;
                         }
+                        .lookbook_2{
+                            margin: 0 0 0 5px;
+                            height: 100%;
+                            width: 50%;
+                            background-image: url("../assets/austin-wade-1520502-unsplash.jpg");
+                            background-size: cover;
+                            color: white;
+                            text-decoration: none;
+                            @extend%center;
+                        } 
                     }
                 }
+                h1{
+                    @extend%center;
+                }
+
                 .categories{
                     height: 90vh;
-                    background: rgb(112, 55, 129);
+                    background: rgb(44, 44, 44);
                     @extend%center;
                     flex-wrap: wrap;
 
-                    div{
+                    a{
                         @extend%center;
-                        background: pink;
+                        background: rgb(44, 44, 44);
                         margin: 5px;
                         width: 45%;
                         height: 30%;
+                        background-image: url("../assets/marek-mucha-1517263-unsplash.jpg");
+                        background-size: cover;
+                        color: white;
+                        text-decoration: none;
                     }
                 }
             }
 
             #product-view{
+                position: relative;
                 .overlay{
                     position: fixed;
                     background: rgba(0, 0, 0, 0.425);
                     height: 100vh;
                     width: 100vw;
                     z-index: 1;
+
                 }
 
                 .view{
@@ -114,53 +196,108 @@ body{
                     z-index: 2;
                     height: 70vh;
                     width: 80vw;
+                    top: 30vw;
                     left: 0;
                     right: 0;
                     margin: auto;
+
+                    h1{
+                       color: black; 
+                    }
+                    .activeImg{
+                        background-image: url("../assets/marek-mucha-1517263-unsplash.jpg");
+                        background-size: cover;
+                        height: 90%;
+                    }
+                    
+                    img{
+                        position: relative;
+                        color: white;
+                        height: 2rem;
+                        width: 2rem;
+                        float: right;
+                        float: bottom;
+                        right: 1rem;
+                        bottom: 2.5rem;
+                    }
                 }
                 .products{
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                img{
-                    height: 200px;
-                    width: 100%;
-                }
+                        
 
-                .product{
-                    display: flex;
-                    flex-direction: column;
-                    height: 150px;
-                    width: calc(100% / 3);
-                    background: rgb(212, 117, 117);
-                    padding: 5px;
-                    box-sizing: border-box;
+                    .new_arrivals{
+                        height: 30vh;
+                        width: 100vw;
+                        padding: 1rem;
+                        background-image: url("../assets/toa-heftiba-1527727-unsplash.jpg");
+                        background-size: cover;
+                    }
+                    .category{
+                        position: relative;
+                        width: 100vw;
+                        text-align: center;
+                        font-size: 1.5rem;
+                    }
+                    .product{
+                        display: flex;
+                        flex-direction: column;
+                        height: 40vh;
+                        
+                        width: 50%;
+                        background: rgb(44, 44, 44);
+                        padding: 5px;
+                        
+                        box-sizing: border-box;
 
-                    div{
-                        height: auto;
-                        img{
-                            height: 50px;
-                            width: 50px;
+                        .itemImg{
+                            flex-grow: 3;
+                            
+                            background-image: url("../assets/austin-wade-1520502-unsplash.jpg");
+                            background-size: cover;
                         }
+                        .text{
+                            flex-shrink: 1;
+                            background: rgb(44, 44, 44);
+                            text-align: center;
+                            img{
+                                height: 1rem;
+                                width: 1rem;
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+                    
                     }
                 } 
             }   
         }
-            .about{
-                .about_text{
-                    padding: 10px;
-                    
-                    img{
-                        height: 20vh;
-                        @extend%center;
-                        align-self: center;
-                    }
+        .about{
+            h1{
+                color: black;
+            }
+            padding: 10px;
+            background: rgb(92, 92, 92);
+            .about_text{
+                
+                
+                img{
+                    height: 20vh;
+                    @extend%center;
+                    align-self: center;
                 }
             }
         }
+        
         footer{
-            background: rgb(67, 67, 165);
-            height: 100px;
+            background: rgb(31, 31, 31);
+            height: 10vh;
+            @extend%center;
+            display: flex;
+            justify-content: space-evenly;
+
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            
         }
     } 
 }

@@ -2,21 +2,25 @@
   <section id="product-view">
     <section class="overlay" v-if="showProduct" v-on:click="close"></section>
     <div class="view" v-if="showProduct">
+      <div class="activeImg"></div>
       <h1>{{activeProduct.ItemName}}</h1>
-          <h1>{{activeProduct.Category}}</h1>
-          <h1>{{activeProduct.Price}} kr</h1>
-          <h1 v-on:click="addToCart(activeProduct)">add to cart!</h1>
+      <h1>{{activeProduct.Price}} kr</h1>
+      <img src="../assets/cart.svg" alt="" class="add" v-on:click="addToCart(activeProduct)"/>
     </div>
     <section class="products">
-      <img src="../assets/toa-heftiba-1527727-unsplash.jpg" alt="">
+      <div class="new_arrivals">
+        New Arrivals
+      </div>
+      <h1 class="category">{{Name}}</h1>
       <div class="product" v-for="item in products" v-bind:key="item.ItemID">
-        <div >
-          <img v-on:click="showItem(item)" src="../assets/marek-mucha-1517263-unsplash.jpg" alt="">
+        <div class="itemImg" v-on:click="showItem(item)"></div>
+        <div class="text">
           <h1>{{item.ItemName}}</h1>
-          <h1>{{item.Category}}</h1>
           <h1>{{item.Price}} kr</h1>
-          <h1 class="add" v-on:click="addToCart(item)">add to cart!</h1>
+          <img src="../assets/cart.svg" alt="" class="add" v-on:click="addToCart(item)"/>
+          
         </div>
+        
       </div>
     </section>
   </section>
@@ -29,6 +33,7 @@ export default {
     return {
       activeProduct: null,
       showProduct: false,
+      Name: "All clothes"
     };
   },
   computed: {
@@ -52,7 +57,6 @@ export default {
       this.activeProduct = item;
     },
     addToCart(item){
-      console.log(item)
       let order = {
         ItemName: item.ItemName,
         Category: item.Category,
@@ -65,9 +69,6 @@ export default {
       //close view
       this.$parent.views.singleProduct = false;
     }
-  },
-  mounted: function() {
-   // this.getClothing();
   }
 };
 </script>

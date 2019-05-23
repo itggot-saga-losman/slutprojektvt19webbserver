@@ -3,10 +3,10 @@
     <product v-if="views.singleProduct" :active="activeProduct"></product>
     <cart :cart="cart" v-if="views.cart" />
     <div id="nav">
-      <h1>Nav</h1>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/clothes">Clothes</router-link> |
+      
+      <router-link to="/">Home</router-link> 
+      <router-link to="/about">About</router-link> 
+      <router-link to="/clothes">Clothes</router-link> 
       <router-link to="/login">Login</router-link>
       <aside class="cart">
         <img src="../src/assets/cart.svg" alt="" @click="toggleCart" />
@@ -20,11 +20,11 @@
     </section>
     
     <footer>
-      <h1>Footer</h1>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/clothes">Clothes</router-link> |
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/">Home </router-link> |
+      <router-link to="/about"> About </router-link> |
+      <router-link to="/clothes"> Clothes </router-link> |
+      <router-link to="/login"> Login </router-link> |
+      <router-link to="/contact"> Contact </router-link>
     </footer>
   </div>
 </template>

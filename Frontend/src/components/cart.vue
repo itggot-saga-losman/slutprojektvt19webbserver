@@ -2,7 +2,9 @@
     <section id="cart">
       <main class="items">
         <h2>Din kundvagn</h2>
-        <h3 @click="close">Tillbaka</h3>
+        
+          <img class="close" @click="close" src="../assets/close.svg" alt="">
+        
         <article class="cart-item" v-for="item in cart" :key="item.ItemID">
             <section class="image">
                 <img src="../assets/austin-wade-1520502-unsplash.jpg" alt="">
